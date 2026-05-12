@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "bank-churn-analytics",
+  "private_key_id": "da46589ffe8234bea70bf21a71c4a614f5b96699",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDS4BqJCVQIKnGZ\nYxPqZOLnmojIqgZp2x/DpkD53fRq8SePEUNNfsWZBbg5ruYGPdHbGoP+V+KaispB\npiYjEZzpkzzXzfAEDvF7C0excxlShTUZfIwewE+OT6FoinYqs+KPh9bHHw607IAv\nulAwGJrjB2E4cQimzZv45of8HF6cc0wujbd8SnYCSDzTY/HodxLLPjmMP71ApKie\nIu4oDYRdoOAmqwFH3uB8JnGooYVC8PnZ/OB7qSw6Wi+hbeWNyFQgtcCb1/kHlZ2e\nkUl5mtaJiMfdPAgaby6P8YASvHFHxVhdcqnMC49GTjOBVwJIdqh2NHsr6eG4eAtk\nZBeElQE1AgMBAAECggEALVOHyJxVcGLlI43xFjEEt7kW/SDUu5SixXxbG4oqkwEO\nWnlgsMvWv79Du7xdC4rmrHSM2hL8bXD3K/jBWkjbJDamfZFxrYGjxKmmSZ1enEbv\nJLEJckOuZf22SUD3yNJ9GJJfZ1IE6H0sSXX/7fKf+jwYGNhs/mOUCsJMiPN1H6Xh\neEuzuWGzaN+jXdL2Mf0icAf/dEmIDCjoWRwLlDXwOMI1yWOCj0SNYtDc+2WTtirS\nr9/YEjjyHWLTXfLeHsRyStGTKrj0ZT/qt2RST/pYaVe2v/QiFSOxZUM2MgGTyqm8\nVwgu3CtDTSzAobI4KB7wvbVub66/vIMwWDbX/JdXgQKBgQD+QYl7p31rql0rSbBf\nZp5p6gHAV+RclwC8Gx+NngBpkiZHf0b1gCGTWwUm2iT+An1+BRk+vGi2cjooMNlg\nZk3TU64zd3pAa/Npz8ba0my/WZrTB4yR9AhUR4dB/IbGup13p8ytRjZeP065P92K\npf/6F1MTZi3yVrfYENlReAtIgQKBgQDUUmRfph/rCMvUQRuJJiJhVqBnMJYWvEu7\n8/KFzZiELoA3K+msflvlKwL+AutYkK4hh8e24ZXEgZLbFCpn9zt1pHAPgrD/SwaR\nif7qwHJml1iJEdcrSj9s7CcaTfNf2LJC6YOWMVWuMhuuYuEdop3GJJP56Mu3IZ6H\nQGJbh0u+tQKBgFxUgk+UMBiEAldw6AqM4mQF5WLqx/PTpiGpG9k6kl3EBACcuLD4\nObkgKYvFVf+j+dxkj5lXpBL1AieMLbQzEnn2fmEUNyHj0b4QBN974J/QM0gFCsgJ\nvWiVnQmaYXsTU5GbLtmRkLbC+JyPE62AwKcaB0IZLgA9+38MB07tb/OBAoGBANA/\n3+NQ9Y16GzIcif2DQcVnSfzsUsoJ9d5r7zv949ICKg/zKkbdyRSFk3HBO0Sq46BP\npTtjF5qd3IS0ysMeY1uH5cHQ1foQhGjLiRSHna2yVExdC0aSlJMpLVFHk6Y2zOGE\nWGRAD2HEFBJ/OX3vugBWcC12gBknCG5wYAiWM1zhAoGAd/hHIdbFn9vvV3eFNlly\nj5VW4p6SdZZRmTp2TlcZb7fSfGRrpRTkg+ahK3JSnrk9lgEdp8DyuogQnG84G5SU\nQJ19U0ozLB9PKdLHbeLYpu/nmobB8tKEe8ihyhYUdYYvBYOzWLHHkEKNW/phSwdv\ncd9jC6N37XlNJN3dcVdKmX0=\n-----END PRIVATE KEY-----\n",
+  "client_email": "dbt-service-account@bank-churn-analytics.iam.gserviceaccount.com",
+  "client_id": "115125533737781227907",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/dbt-service-account%40bank-churn-analytics.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
