@@ -59,14 +59,15 @@ df['ab_group'] = df.apply(
     if x['risk_segment'] in ['High Risk', 'Medium Risk'] else None, axis=1
 )
 
-# ── 3. Chi-square Test for statistical significance ──
+    # ── 3. Chi-square Test for statistical significance ──
 print("\n── A/B Test Results ──")
+print(f"{'Segment':<15} {'Control Churn Rate':<22} {'Treatment Churn Rate':<22} {'P-value':<10} {'Significant'}")
+print("-" * 80)
 for segment in ['High Risk', 'Medium Risk']:
     seg_df = df[df['risk_segment'] == segment]
     control = seg_df[seg_df['ab_group'] == 'Control']
     treatment = seg_df[seg_df['ab_group'] == 'Treatment']
 
-    # Build contingency table
     table = [
         [control['churn'].sum(), len(control) - control['churn'].sum()],
         [treatment['churn'].sum(), len(treatment) - treatment['churn'].sum()]
@@ -74,8 +75,22 @@ for segment in ['High Risk', 'Medium Risk']:
 
     chi2, p_value, dof, _ = stats.chi2_contingency(table)
 
-    print(f"\n--- {segment} ---")
-    print(f"Control churn rate:   {control['churn'].mean()*100:.2f}%")
-    print(f"Treatment churn rate: {treatment['churn'].mean()*100:.2f}%")
-    print(f"P-value: {p_value:.4f}")
-    print(f"Statistically significant: {'Yes ✅' if p_value < 0.05 else 'No'}")
+    print(f"{segment:<15} {control['churn'].mean()*100:<22.2f} {treatment['churn'].mean()*100:<22.2f} {p_value:<10.4f} {'Yes' if p_value < 0.05 else 'No'}")
+
+    # ── 4. Save ML results to BigQuery ──────────────────
+output_df = df[['customer_id', 'country', 'gender', 'age', 
+                'credit_score', 'balance', 'churn',
+                'churn_probability', 'risk_segment', 'ab_group']].copy()
+
+# Define table destination
+table_id = "bank-churn-analytics.dbt_jchoi.ml_churn_predictions"
+
+# Write to BigQuery
+output_df.to_gbq(
+    destination_table="dbt_jchoi.ml_churn_predictions",
+    project_id="bank-churn-analytics",
+    if_exists="replace",
+    credentials=None  # uses GOOGLE_APPLICATION_CREDENTIALS
+)
+
+print("\n ML predictions saved to BigQuery: dbt_jchoi.ml_churn_predictions")
