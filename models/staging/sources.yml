@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: bank_churn_raw
+    database: bank-churn-analytics
+    schema: bank_churn_raw
+    tables:
+      - name: raw_customer
