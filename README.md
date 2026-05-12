@@ -18,6 +18,7 @@ three core business questions:
 - **dbt** — data modeling & transformation
 - **Python** — ML modeling, visualization
   - scikit-learn (Logistic Regression)
+  - scipy (Hypothesis Testing)
   - matplotlib (charts)
 - **GitHub** — version control
 
@@ -55,6 +56,40 @@ three core business questions:
 ![Churn by Balance Tier](images/churn_by_balance_tier.png)
 
 - High balance customers show elevated churn, indicating the bank may be losing its most valuable depositors
+
+---
+
+## Statistical Hypothesis Testing
+
+### Business Question
+
+Are customers aged 46–60 significantly more likely to churn compared to other customers?
+
+### Hypothesis
+
+- **Null Hypothesis (H₀):** Customers aged 46–60 have the same churn rate as other age groups.
+- **Alternative Hypothesis (H₁):** Customers aged 46–60 have a significantly higher churn rate than other age groups.
+
+### Statistical Test
+
+A **Chi-Square Test of Independence** was conducted to determine whether churn behavior is significantly associated with customers aged 46–60.
+
+### Result
+
+The test produced a p-value below 0.05, indicating a statistically significant relationship between the 46–60 age segment and churn behavior.
+
+This confirms that customers aged 46–60 are significantly more likely to churn than other customer groups.
+
+### Business Impact
+
+Because middle-aged customers are often financially established and maintain larger banking relationships, this finding supports targeted retention campaigns focused on:
+
+- Personalized outreach
+- Competitive lending offers
+- Loyalty incentives
+- Relationship management programs
+
+This allows the bank to prioritize retention efforts toward a statistically validated high-risk customer segment.
 
 ---
 
@@ -123,7 +158,8 @@ By combining:
 
 1. **Churn prediction** — identify who will leave before they do
 2. **Customer segmentation** — understand why different groups churn
-3. **Targeted retention strategies** — act on insights with personalized offers
+3. **Statistical validation** — confirm high-risk churn patterns are statistically significant
+4. **Targeted retention strategies** — act on insights with personalized offers
 
 The bank can move from **reactive retention** to **proactive retention**.
 
