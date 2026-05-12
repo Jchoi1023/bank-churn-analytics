@@ -59,11 +59,7 @@ customer lifetime value.
 
 A **Logistic Regression** model was trained on 8,000 customers and tested on 2,000 to predict individual churn probability.
 
-| Metric | Score |
-|--------|-------|
-| Accuracy | 71% |
-| Churn Recall | 68% |
-| Features Used | credit score, age, tenure, balance, products, activity status, salary |
+![Model Performance](images/model_performance.png)
 
 Class imbalance (80/20 split) was addressed using `class_weight='balanced'`, improving churn recall from 15% to 68%.
 
@@ -82,7 +78,7 @@ High and Medium Risk customers were randomly assigned to Control and Treatment g
 
 ![A/B Test Results](images/ab_test_results.png)
 
-![A/B Test Result Table](images/ab_test_results_table.png)
+![A/B Test Result Table](images/ab_test_result_table.png)
 
 **Note:** No statistically significant difference was found between groups (p > 0.05). This is expected in a simulated environment where no actual intervention was applied. In a production setting, the Treatment group would receive real retention offers (e.g. fee waivers, preferential rates), and churn outcomes would be measured over 90 days.
 
